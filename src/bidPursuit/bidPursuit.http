@@ -1,0 +1,6 @@
+@bidPursuit_HostAddress = http://localhost:5251
+
+GET {{bidPursuit_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

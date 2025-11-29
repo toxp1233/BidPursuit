@@ -1,0 +1,15 @@
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\bin\Debug\net10.0\bidPursuit.Infrastructure.deps.json
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\bin\Debug\net10.0\bidPursuit.Infrastructure.dll
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\bin\Debug\net10.0\bidPursuit.Infrastructure.pdb
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\bin\Debug\net10.0\bidPursuit.Domain.dll
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\bin\Debug\net10.0\bidPursuit.Domain.pdb
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\bidPursuit.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\bidPursuit.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\bidPursuit.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\bidPursuit.Infrastructure.AssemblyInfo.cs
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\bidPursuit.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\bidPursu.5982A2BB.Up2Date
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\bidPursuit.Infrastructure.dll
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\refint\bidPursuit.Infrastructure.dll
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\bidPursuit.Infrastructure.pdb
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Infrastructure\obj\Debug\net10.0\ref\bidPursuit.Infrastructure.dll
