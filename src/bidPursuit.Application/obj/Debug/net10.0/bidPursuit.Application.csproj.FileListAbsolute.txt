@@ -1,0 +1,17 @@
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\bin\Debug\net10.0\bidPursuit.Application.deps.json
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\bin\Debug\net10.0\bidPursuit.Application.dll
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\bin\Debug\net10.0\bidPursuit.Application.pdb
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\bin\Debug\net10.0\bidPursuit.Domain.dll
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\bin\Debug\net10.0\bidPursuit.Infrastructure.dll
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\bin\Debug\net10.0\bidPursuit.Domain.pdb
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\bin\Debug\net10.0\bidPursuit.Infrastructure.pdb
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\bidPursuit.Application.csproj.AssemblyReference.cache
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\bidPursuit.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\bidPursuit.Application.AssemblyInfoInputs.cache
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\bidPursuit.Application.AssemblyInfo.cs
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\bidPursuit.Application.csproj.CoreCompileInputs.cache
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\bidPursu.F739994F.Up2Date
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\bidPursuit.Application.dll
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\refint\bidPursuit.Application.dll
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\bidPursuit.Application.pdb
+C:\Users\sosoc\source\repos\bidPursuit\src\bidPursuit.Application\obj\Debug\net10.0\ref\bidPursuit.Application.dll

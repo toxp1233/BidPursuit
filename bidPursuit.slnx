@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/bidPursuit.Application/bidPursuit.Application.csproj" />
+    <Project Path="src/bidPursuit.Domain/bidPursuit.Domain.csproj" />
+    <Project Path="src/bidPursuit.Infrastructure/bidPursuit.Infrastructure.csproj" />
+    <Project Path="src/bidPursuit/bidPursuit.API.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
