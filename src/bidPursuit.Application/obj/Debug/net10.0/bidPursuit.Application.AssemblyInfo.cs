@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bidPursuit.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cce80607f0aefad12b0ee47e20bbd2d0157d92bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("bidPursuit.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bidPursuit.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
