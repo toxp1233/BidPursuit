@@ -4097,23 +4097,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chakh\\.nuget\\packages\\": {},
+    "C:\\Users\\sosoc\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BidPursuit\\src\\bidPursuit\\bidPursuit.API.csproj",
+      "projectUniqueName": "C:\\Users\\sosoc\\source\\BidPursuit\\src\\bidPursuit\\bidPursuit.API.csproj",
       "projectName": "bidPursuit.API",
-      "projectPath": "D:\\BidPursuit\\src\\bidPursuit\\bidPursuit.API.csproj",
-      "packagesPath": "C:\\Users\\chakh\\.nuget\\packages\\",
-      "outputPath": "D:\\BidPursuit\\src\\bidPursuit\\obj\\",
+      "projectPath": "C:\\Users\\sosoc\\source\\BidPursuit\\src\\bidPursuit\\bidPursuit.API.csproj",
+      "packagesPath": "C:\\Users\\sosoc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sosoc\\source\\BidPursuit\\src\\bidPursuit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\chakh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sosoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4129,11 +4129,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\BidPursuit\\src\\bidPursuit.Application\\bidPursuit.Application.csproj": {
-              "projectPath": "D:\\BidPursuit\\src\\bidPursuit.Application\\bidPursuit.Application.csproj"
+            "C:\\Users\\sosoc\\source\\BidPursuit\\src\\bidPursuit.Application\\bidPursuit.Application.csproj": {
+              "projectPath": "C:\\Users\\sosoc\\source\\BidPursuit\\src\\bidPursuit.Application\\bidPursuit.Application.csproj"
             },
-            "D:\\BidPursuit\\src\\bidPursuit.Infrastructure\\bidPursuit.Infrastructure.csproj": {
-              "projectPath": "D:\\BidPursuit\\src\\bidPursuit.Infrastructure\\bidPursuit.Infrastructure.csproj"
+            "C:\\Users\\sosoc\\source\\BidPursuit\\src\\bidPursuit.Infrastructure\\bidPursuit.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\sosoc\\source\\BidPursuit\\src\\bidPursuit.Infrastructure\\bidPursuit.Infrastructure.csproj"
             }
           }
         }
@@ -4192,7 +4192,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -21,3 +21,15 @@ D:\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\bidPursuit.Domain.dll
 D:\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\refint\bidPursuit.Domain.dll
 D:\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\bidPursuit.Domain.pdb
 D:\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\ref\bidPursuit.Domain.dll
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\bin\Debug\net10.0\bidPursuit.Domain.deps.json
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\bin\Debug\net10.0\bidPursuit.Domain.dll
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\bin\Debug\net10.0\bidPursuit.Domain.pdb
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\bidPursuit.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\bidPursuit.Domain.AssemblyInfoInputs.cache
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\bidPursuit.Domain.AssemblyInfo.cs
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\bidPursuit.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\bidPursuit.Domain.sourcelink.json
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\bidPursuit.Domain.dll
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\refint\bidPursuit.Domain.dll
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\bidPursuit.Domain.pdb
+C:\Users\sosoc\source\BidPursuit\src\bidPursuit.Domain\obj\Debug\net10.0\ref\bidPursuit.Domain.dll

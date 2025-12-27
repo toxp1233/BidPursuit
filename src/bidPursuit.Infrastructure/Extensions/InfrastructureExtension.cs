@@ -20,6 +20,7 @@ public static class InfrastructureExtension
         Services.AddScoped<IUnitOfWork, UnitOfWork>();
         Services.AddScoped<IJwtService, JwtService>();
         Services.AddScoped<IPasswordHelper, PasswordHelper>();
+        Services.AddScoped<IAuctionRepository, AuctionRepository>();
         return Services;
     }
 }
