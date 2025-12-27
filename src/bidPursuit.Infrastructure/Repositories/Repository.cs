@@ -21,6 +21,9 @@ public class Repository<T>(BidPursuitDbContext context)
     public void Update(T entity) =>
         _context.Set<T>().Update(entity);
 
+    public void Delete(T entity) =>
+        _context.Set<T>().Remove(entity);
+
     public IQueryable<T> Query() =>
         _context.Set<T>().AsQueryable();
 }

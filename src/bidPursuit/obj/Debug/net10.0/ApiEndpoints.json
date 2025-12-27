@@ -8,8 +8,34 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "registerCommand",
+        "Name": "loginCommand",
         "Type": "bidPursuit.Application.Auth.Commands.Login.LoginCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "bidPursuit.API.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "bidPursuit.API.Controllers.AuthController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/Auth/refresh-token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshTokenCommand",
+        "Type": "bidPursuit.Application.Auth.Commands.RefreshToken.RefreshTokenCommand",
         "IsRequired": true
       }
     ],
