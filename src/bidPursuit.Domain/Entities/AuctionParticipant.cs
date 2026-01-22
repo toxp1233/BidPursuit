@@ -13,5 +13,6 @@ public class AuctionParticipant
     public DateTime JoinedAt { get; set; } = DateTime.UtcNow;
 
     public bool IsActive { get; set; } = true;
+    public bool HasBidded { get; set; } = false;
     public bool IsEarlyBidder { get; set; } = false;
 }

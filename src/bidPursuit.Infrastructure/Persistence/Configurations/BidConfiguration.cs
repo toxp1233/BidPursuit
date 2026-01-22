@@ -14,5 +14,9 @@ public class BidConfiguration : IEntityTypeConfiguration<Bid>
 
         builder.Property(b => b.Amount)
             .HasColumnType("decimal(18,2)");
+
+        builder.Property(a => a.Xmin)
+            .IsRowVersion()
+            .ValueGeneratedOnAddOrUpdate();
     }
 }

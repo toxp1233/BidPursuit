@@ -20,7 +20,7 @@ public class LoginCommandHandler(
         var user = await userRepository.GetByEmailAsync(request.Email, cancellationToken) ?? throw new NotFoundException(nameof(User), request.Email);
         if (!user.IsActive)
         {
-            throw new UnauthorizedAccessException("User account is Banned.");
+            throw new UnauthorizedException("User account is Banned.");
         }
         //else if (!user.IsEmailVerified)
         //{
@@ -28,7 +28,7 @@ public class LoginCommandHandler(
         //}
         else if (!passwordHelper.Verify(request.Password, user.PasswordHash))
         {
-            throw new UnauthorizedAccessException("Invalid password");
+            throw new UnauthorizedException("Invalid password");
         }
 
         user.RefreshToken = jwtService.GenerateRefreshToken();

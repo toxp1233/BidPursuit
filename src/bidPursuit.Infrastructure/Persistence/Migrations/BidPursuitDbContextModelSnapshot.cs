@@ -31,6 +31,9 @@ namespace bidPursuit.Infrastructure.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp without time zone");
 
+                    b.Property<Guid>("CurrentCarId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
@@ -51,12 +54,21 @@ namespace bidPursuit.Infrastructure.Persistence.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("timestamp without time zone");
 
+                    b.Property<int>("State")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp without time zone");
+
+                    b.Property<uint>("Xmin")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("xid")
+                        .HasColumnName("xmin");
 
                     b.HasKey("Id");
 
@@ -73,6 +85,9 @@ namespace bidPursuit.Infrastructure.Persistence.Migrations
 
                     b.Property<Guid>("AuctionId")
                         .HasColumnType("uuid");
+
+                    b.Property<bool>("HasBidded")
+                        .HasColumnType("boolean");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("boolean");
@@ -105,6 +120,9 @@ namespace bidPursuit.Infrastructure.Persistence.Migrations
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<Guid>("AuctionId")
+                        .HasColumnType("uuid");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp without time zone");
 
@@ -113,6 +131,12 @@ namespace bidPursuit.Infrastructure.Persistence.Migrations
 
                     b.Property<Guid>("VehicleId")
                         .HasColumnType("uuid");
+
+                    b.Property<uint>("Xmin")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("xid")
+                        .HasColumnName("xmin");
 
                     b.HasKey("Id");
 
@@ -182,7 +206,7 @@ namespace bidPursuit.Infrastructure.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("AuctionId")
+                    b.Property<Guid?>("AuctionId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Brand")
@@ -199,6 +223,9 @@ namespace bidPursuit.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<bool>("EarlyBiddingEnabled")
+                        .HasColumnType("boolean");
+
                     b.Property<bool>("IsSold")
                         .HasColumnType("boolean");
 
@@ -214,6 +241,9 @@ namespace bidPursuit.Infrastructure.Persistence.Migrations
 
                     b.Property<decimal>("StartingPrice")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("State")
+                        .HasColumnType("integer");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
@@ -284,8 +314,7 @@ namespace bidPursuit.Infrastructure.Persistence.Migrations
                     b.HasOne("bidPursuit.Domain.Entities.Auction", "Auction")
                         .WithMany("Vehicles")
                         .HasForeignKey("AuctionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("bidPursuit.Domain.Entities.User", "Publisher")
                         .WithMany("PublishedVehicles")

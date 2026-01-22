@@ -2,7 +2,7 @@
 
 public enum Roles
 {
-    admin = 1,
-    agent = 2,
-    user = 3
+    Admin = 1,
+    Agent = 2,
+    User = 3
 }

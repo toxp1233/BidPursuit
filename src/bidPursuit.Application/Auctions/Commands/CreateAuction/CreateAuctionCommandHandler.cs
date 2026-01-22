@@ -15,6 +15,7 @@ public class CreateAuctionCommandHandler(
     public async Task<AuctionDto> Handle(CreateAuctionCommand request, CancellationToken cancellationToken)
     {
         var newAction = mapper.Map<Auction>(request);
+        newAction.State = Domain.Enums.AuctionState.Scheduled;
         await auctionRepository.AddAsync(newAction, cancellationToken);
         await unitOfWork.SaveChangesAsync(cancellationToken);
         return mapper.Map<AuctionDto>(newAction);

@@ -23,6 +23,24 @@ public class ErrorHandlingMiddleware(ILogger<ErrorHandlingMiddleware> logger) : 
             await context.Response.WriteAsync(AlreadyExists.Message);
             logger.LogInformation(AlreadyExists.Message);
         }
+        catch (UnauthorizedException unauthorized)
+        {
+            context.Response.StatusCode = 401;
+            await context.Response.WriteAsync(unauthorized.Message);
+            logger.LogWarning(unauthorized.Message);
+        }
+        catch (InvalidBusinessOperationException invalidBusinessOperation)
+        {
+            context.Response.StatusCode = 400;
+            await context.Response.WriteAsync(invalidBusinessOperation.Message);
+            logger.LogWarning(invalidBusinessOperation.Message);
+        }
+        catch (ConcurrencyException concurrency)
+        {
+            context.Response.StatusCode = 409;
+            await context.Response.WriteAsync(concurrency.Message);
+            logger.LogWarning(concurrency.Message);
+        }
         catch (Exception ex)
         {
             logger.LogError(ex, ex.Message);

@@ -8,10 +8,10 @@ public class UniversalMapper : Profile
 {
     public UniversalMapper()
     {
-        CreateMap<User, UserDto>().ReverseMap();
-        CreateMap<Vehicle, VehicleDto>().ReverseMap();
-        CreateMap<Bid, BidDto>().ReverseMap();
-        CreateMap<Auction, AuctionDto>().ReverseMap();
-        CreateMap<AuctionParticipant, AuctionParticipantDto>().ReverseMap();
+        CreateMap<User, UserDto>();
+        CreateMap<Vehicle, VehicleDto>();
+        CreateMap<Auction, AuctionDto>();
+        CreateMap<AuctionParticipant, AuctionParticipantDto>();
+        CreateMap<Bid, BidDto>();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using bidPursuit.Application.Auth.Dtos;
 using bidPursuit.Domain.Entities;
+using bidPursuit.Domain.Enums;
 using bidPursuit.Domain.Exceptions;
 using bidPursuit.Domain.Interfaces;
 using MediatR;
@@ -28,7 +29,7 @@ public class RegisterCommandHandler(
         newUser.PasswordHash = passwordHelper.Hash(request.RegistrationParameters.Password);
         newUser.RefreshToken = jwtService.GenerateRefreshToken();
         newUser.RefreshTokenExpiryTime = jwtService.GenerateRefreshTokenExpiry();
-
+        newUser.Role = Roles.User;
         await userRepository.AddAsync(newUser, cancellationToken);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 

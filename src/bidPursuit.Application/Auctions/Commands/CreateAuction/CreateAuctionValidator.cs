@@ -11,6 +11,7 @@ public class CreateAuctionValidator : AbstractValidator<CreateAuctionCommand>
             .MaximumLength(100).WithMessage("Title cannot exceed 100 characters.");
         RuleFor(x => x.StartTime)
             .NotEmpty().WithMessage("StartTime is required.")
+            .GreaterThan(DateTime.UtcNow)
             .LessThan(x => x.EndTime).WithMessage("StartTime must be before EndTime.");
         RuleFor(x => x.EndTime)
             .NotEmpty().WithMessage("EndTime is required.")

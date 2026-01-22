@@ -2,36 +2,40 @@
 using AutoMapper.QueryableExtensions;
 using bidPursuit.Application.Common;
 using bidPursuit.Application.PublicDtos;
-using bidPursuit.Domain.Entities;
-using bidPursuit.Domain.Exceptions;
+using bidPursuit.Application.Services;
 using bidPursuit.Domain.Interfaces;
 using MediatR;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace bidPursuit.Application.Auctions.Querys.GetAllAuctions;
 
 public class GetAllAuctionsQueryHandler(
     IAuctionRepository auctionRepository,
+    IAuctionLifecycleService lifecycleService,
     IMapper mapper
-    ) : IRequestHandler<GetAllAuctionsQuery, PaginatedList<AuctionDto>>
+) : IRequestHandler<GetAllAuctionsQuery, PaginatedList<AuctionDto>>
 {
-    public async Task<PaginatedList<AuctionDto>> Handle(GetAllAuctionsQuery request, CancellationToken cancellationToken)
+    public async Task<PaginatedList<AuctionDto>> Handle(
+        GetAllAuctionsQuery request,
+        CancellationToken cancellationToken)
     {
+        await lifecycleService.StartScheduledAuctionsIfNeededAsync(cancellationToken);
+
         var auctions = auctionRepository.Query();
 
         if (!string.IsNullOrEmpty(request.PaginationParameters.Search))
         {
             var search = request.PaginationParameters.Search.ToLower();
-            auctions = auctions.Where(u =>
-                u.Title.ToLower().Contains(search) ||
-                u.Description.ToLower().Contains(search)) ?? throw new NotFoundException(nameof(Auction), request.PaginationParameters.Search);
+            auctions = auctions.Where(a =>
+                a.Title.ToLower().Contains(search) ||
+                a.Description.ToLower().Contains(search));
         }
 
-        var auctionDto = auctions.ProjectTo<AuctionDto>(mapper.ConfigurationProvider);
+        var auctionDto = auctions
+            .ProjectTo<AuctionDto>(mapper.ConfigurationProvider);
 
-        return await PaginatedList<AuctionDto>.CreateAsync(auctionDto,
+        return await PaginatedList<AuctionDto>.CreateAsync(
+            auctionDto,
             request.PaginationParameters.PageNumber,
             request.PaginationParameters.PageSize);
     }
 }
-

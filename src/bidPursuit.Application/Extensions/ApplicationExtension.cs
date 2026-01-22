@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using bidPursuit.Application.Services;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +16,7 @@ public static class ApplicationExtension
         Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly));
         Services.AddAutoMapper(cfg => cfg.AddMaps(Assembly));
         Services.AddValidatorsFromAssembly(Assembly).AddFluentValidationAutoValidation();
-
+        Services.AddScoped<IAuctionLifecycleService, AuctionLifecycleService>();
         var jwtKey = Configuration["TokenSettings:Key"];
         if (string.IsNullOrEmpty(jwtKey))
             throw new Exception("TokenSettings: Key not found in configuration");

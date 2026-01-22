@@ -21,5 +21,9 @@ public class AuctionConfiguration : IEntityTypeConfiguration<Auction>
             .WithOne(ap => ap.Auction)
             .HasForeignKey(ap => ap.AuctionId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        builder.Property(a => a.Xmin)
+            .IsRowVersion()
+            .ValueGeneratedOnAddOrUpdate();
     }
 }
