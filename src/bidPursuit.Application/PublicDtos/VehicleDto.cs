@@ -16,6 +16,6 @@ public class VehicleDto
     public bool IsSold { get; set; }
     public string CurrentLocation { get; set; } = default!;
     public List<BidDto>? Bids { get; set; }
-
+    public List<string> Images { get; set; } = [];
     public UserDto Publisher { get; set; } = default!;
 }

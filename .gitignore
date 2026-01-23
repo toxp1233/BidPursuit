@@ -21,3 +21,4 @@ Thumbs.db
 
 # Logs
 *.log
+/src/bidPursuit/appsettings.Production.json

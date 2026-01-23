@@ -2,6 +2,8 @@
 using bidPursuit.Application.Vehicles.Commands.CreateVehicle;
 using bidPursuit.Application.Vehicles.Commands.DeleteVehicle;
 using bidPursuit.Application.Vehicles.Commands.UpdateVehicle;
+using bidPursuit.Application.Vehicles.Commands.UploadVehicleImage;
+using bidPursuit.Application.Vehicles.Dtos;
 using bidPursuit.Application.Vehicles.Querys.GetAllVehicles;
 using bidPursuit.Application.Vehicles.Querys.GetAllVehiclesById;
 using bidPursuit.Domain.Enums;
@@ -34,7 +36,7 @@ public class VehicleController(IMediator mediator) : ControllerBase
     }
 
     // AGENT / ADMIN — manage vehicles
-    [Authorize(Roles = $"{nameof(Roles.Agent)},{nameof(Roles.Admin)}")]
+    //[Authorize(Roles = $"{nameof(Roles.Agent)},{nameof(Roles.Admin)}")]
     [HttpPost]
     public async Task<IActionResult> CreateVehicle(CreateVehicleCommand command)
     {
@@ -67,6 +69,26 @@ public class VehicleController(IMediator mediator) : ControllerBase
         await mediator.Send(new DeleteVehicleCommand(id));
         return NoContent();
     }
+
+    //[Authorize(Roles = $"{nameof(Roles.Agent)},{nameof(Roles.Admin)}")]
+    [HttpPost("{id:guid}/upload")]
+    public async Task<IActionResult> UploadVehicleImage(
+        Guid id,
+        [FromForm] UploadVehicleImageRequestDto request)
+    {
+        await using var stream = request.File.OpenReadStream();
+
+        var command = new UploadVehicleImageCommand
+        {
+            VehicleId = id,
+            FileName = request.File.FileName,
+            File = stream
+        };
+
+        await mediator.Send(command);
+        return NoContent();
+    }
+
 
     private Guid GetUserId()
     {

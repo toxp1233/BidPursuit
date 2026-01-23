@@ -2,6 +2,7 @@
 using bidPursuit.Domain.Services;
 using bidPursuit.Infrastructure.Helper;
 using bidPursuit.Infrastructure.Persistence;
+using bidPursuit.Infrastructure.Persistence.Configurations;
 using bidPursuit.Infrastructure.Repositories;
 using bidPursuit.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,8 @@ public static class InfrastructureExtension
         Services.AddScoped<IBidRepository, BidRepository>();
         Services.AddScoped<IAuctionParticipantRepository, AuctionParticipantRepository>();
         Services.AddScoped<ILotNumberService, LotNumberService>();
+        Services.Configure<BlobStorageSettings>(Configuration.GetSection("BlobStorage"));
+        Services.AddScoped<IBlobStorageService, BlobStorageService>();
         return Services;
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using bidPursuit.Infrastructure.Persistence;
@@ -12,9 +13,11 @@ using bidPursuit.Infrastructure.Persistence;
 namespace bidPursuit.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(BidPursuitDbContext))]
-    partial class BidPursuitDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260123131451_ChangedTheTypeOfTheImageSupport")]
+    partial class ChangedTheTypeOfTheImageSupport
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

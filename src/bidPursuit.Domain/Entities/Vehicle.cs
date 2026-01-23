@@ -22,7 +22,7 @@ public class Vehicle
     public Guid UserId { get; set; }
     public User Publisher { get; set; } = default!;
     public ICollection<Bid> Bids { get; set; } = [];
-
+    public List<string> Images { get; set; } = [];
     public void JoinAuction(Auction auction, int lotNumber, int position)
     {
         Auction = auction;
